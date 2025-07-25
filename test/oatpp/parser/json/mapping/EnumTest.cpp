@@ -34,13 +34,13 @@ namespace {
 
 #include OATPP_CODEGEN_BEGIN(DTO)
 
-ENUM(Enum0, v_int32);
+ENUM(Enum0, v_int32)
 
 ENUM(Enum1, v_int32,
   VALUE(V1, 10, "enum1-v1"),
   VALUE(V2, 20, "enum1-v2"),
   VALUE(V3, 30, "enum1-v3")
-);
+)
 
 class DTO1 : public oatpp::DTO {
 
