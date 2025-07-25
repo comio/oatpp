@@ -122,7 +122,7 @@ set_target_source_groups(oatppAllTests STRIP_PREFIX "oatpp")
 target_link_libraries(oatppAllTests PRIVATE oatpp PRIVATE oatpp-test)
 
 set_target_properties(oatppAllTests PROPERTIES
-    CXX_STANDARD 11
+    CXX_STANDARD 20
     CXX_EXTENSIONS OFF
     CXX_STANDARD_REQUIRED ON
 )

@@ -298,7 +298,7 @@ add_library(oatpp
 set_target_source_groups(oatpp STRIP_PREFIX "oatpp")
 
 set_target_properties(oatpp PROPERTIES
-        CXX_STANDARD 11
+        CXX_STANDARD 20
         CXX_EXTENSIONS OFF
         CXX_STANDARD_REQUIRED ON
 )
@@ -348,7 +348,7 @@ if(OATPP_LINK_TEST_LIBRARY)
 	set_target_source_groups(oatpp-test STRIP_PREFIX oatpp-test)
 
 	set_target_properties(oatpp-test PROPERTIES
-			CXX_STANDARD 11
+			CXX_STANDARD 20
 			CXX_EXTENSIONS OFF
 			CXX_STANDARD_REQUIRED ON
 	)
