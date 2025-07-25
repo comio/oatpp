@@ -216,7 +216,7 @@ public:
      * @param tfmt - time format.
      * @param printMicroTicks - show ticks in microseconds.
      */
-    Config(const char* tfmt, bool printMicroTicks, v_uint32 initialLogMask)
+    Config(const char* tfmt, bool printMicroTicks, v_uint32 initialLogMask) noexcept
       : timeFormat(tfmt)
       , printTicks(printMicroTicks)
       , logMask(initialLogMask)
@@ -251,7 +251,7 @@ public:
           "%Y-%m-%d %H:%M:%S",
           true,
           (1 << PRIORITY_V) | (1 << PRIORITY_D) | (1 << PRIORITY_I) | (1 << PRIORITY_W) | (1 << PRIORITY_E)
-          ));
+          )) noexcept;
 
   /**
    * Log message with priority, tag, message.

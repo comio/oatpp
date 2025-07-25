@@ -248,7 +248,7 @@ protected:
     Method m_method;
     MethodAsync m_methodAsync;
   public:
-    Handler(T* controller, Method method, MethodAsync methodAsync)
+    Handler(T* controller, Method method, MethodAsync methodAsync) noexcept
       : m_controller(controller)
       , m_method(method)
       , m_methodAsync(methodAsync)

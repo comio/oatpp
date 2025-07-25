@@ -47,7 +47,7 @@ private:
   v_int64 m_id;
 public:
 
-  MyResource(v_int64 number)
+  MyResource(v_int64 number) noexcept
     : m_id(number)
   {}
 

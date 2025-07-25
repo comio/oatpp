@@ -49,14 +49,14 @@ struct InlineReadData {
   /**
    * Default constructor.
    */
-  InlineReadData();
+  InlineReadData() noexcept;
 
   /**
    * Constructor.
    * @param data
    * @param size
    */
-  InlineReadData(void* data, v_buff_size size);
+  InlineReadData(void* data, v_buff_size size) noexcept;
 
   /**
    * Set `currBufferPtr` and `bytesLeft` values. <br>

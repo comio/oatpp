@@ -41,7 +41,7 @@ namespace oatpp { namespace web { namespace client {
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // HttpRequestExecutor::ConnectionProxy
 
-HttpRequestExecutor::ConnectionProxy::ConnectionProxy(const provider::ResourceHandle<data::stream::IOStream>& connectionHandle)
+HttpRequestExecutor::ConnectionProxy::ConnectionProxy(const provider::ResourceHandle<data::stream::IOStream>& connectionHandle) noexcept
   : m_connectionHandle(connectionHandle)
   , m_valid(true)
   , m_invalidateOnDestroy(false)
@@ -99,7 +99,7 @@ void HttpRequestExecutor::ConnectionProxy::setInvalidateOnDestroy(bool invalidat
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // HttpRequestExecutor::HttpConnectionHandle
 
-HttpRequestExecutor::HttpConnectionHandle::HttpConnectionHandle(const std::shared_ptr<ConnectionProxy>& connectionProxy)
+HttpRequestExecutor::HttpConnectionHandle::HttpConnectionHandle(const std::shared_ptr<ConnectionProxy>& connectionProxy) noexcept
   : m_connectionProxy(connectionProxy)
 {}
 

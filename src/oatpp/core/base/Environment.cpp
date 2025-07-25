@@ -63,7 +63,7 @@ std::unordered_map<std::string, std::unordered_map<std::string, void*>>& Environ
 
 std::shared_ptr<Logger> Environment::m_logger;
 
-DefaultLogger::DefaultLogger(const Config& config)
+DefaultLogger::DefaultLogger(const Config& config) noexcept
   : m_config(config)
 {}
 

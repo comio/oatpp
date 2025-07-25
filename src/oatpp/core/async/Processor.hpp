@@ -74,7 +74,7 @@ private:
     std::tuple<Args...> m_params;
   public:
 
-    SubmissionTemplate(Args... params)
+    SubmissionTemplate(Args... params) noexcept
       : m_params(std::make_tuple(params...))
     {}
 

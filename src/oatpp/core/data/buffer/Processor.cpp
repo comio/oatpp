@@ -29,12 +29,12 @@ namespace oatpp { namespace data{ namespace buffer {
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // InlineReadData
 
-InlineReadData::InlineReadData()
+InlineReadData::InlineReadData() noexcept
   : currBufferPtr(nullptr)
   , bytesLeft(0)
 {}
 
-InlineReadData::InlineReadData(void* data, v_buff_size size)
+InlineReadData::InlineReadData(void* data, v_buff_size size) noexcept
   : currBufferPtr(data)
   , bytesLeft(size)
 {}

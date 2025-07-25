@@ -29,11 +29,11 @@ namespace oatpp { namespace web { namespace mime { namespace multipart {
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // PartsParser
 
-PartsParser::PartsParser(Multipart* multipart)
+PartsParser::PartsParser(Multipart* multipart) noexcept
   : m_multipart(multipart)
 {}
 
-PartsParser::PartsParser(Multipart* multipart, const PartReadersMap& readersMap)
+PartsParser::PartsParser(Multipart* multipart, const PartReadersMap& readersMap) noexcept
   : m_readers(readersMap)
   , m_multipart(multipart)
 {}
@@ -81,11 +81,11 @@ void PartsParser::setDefaultPartReader(const std::shared_ptr<PartReader>& reader
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // AsyncPartsParser
 
-AsyncPartsParser::AsyncPartsParser(Multipart* multipart)
+AsyncPartsParser::AsyncPartsParser(Multipart* multipart) noexcept
   : m_multipart(multipart)
 {}
 
-AsyncPartsParser::AsyncPartsParser(Multipart* multipart, const AsyncPartReadersMap& readersMap)
+AsyncPartsParser::AsyncPartsParser(Multipart* multipart, const AsyncPartReadersMap& readersMap) noexcept
   : m_readers(readersMap)
   , m_multipart(multipart)
 {}

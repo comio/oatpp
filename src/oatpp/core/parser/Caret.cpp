@@ -124,19 +124,19 @@ v_int64 Caret::StateSaveGuard::getSavedErrorCode() {
 /////////////////////////////////////////////////////////////////////////////////
 // Caret
 
-  Caret::Caret(const char* text)
+  Caret::Caret(const char* text) noexcept
     : Caret(text, static_cast<v_buff_size>(std::strlen(text)))
   {}
-  
-  Caret::Caret(const char* parseData, v_buff_size dataSize)
+
+  Caret::Caret(const char* parseData, v_buff_size dataSize) noexcept
     : m_data(parseData)
     , m_size(dataSize)
     , m_pos(0)
     , m_errorMessage(nullptr)
     , m_errorCode(0)
   {}
-  
-  Caret::Caret(const oatpp::String& str)
+
+  Caret::Caret(const oatpp::String& str) noexcept
     : Caret(str->data(), static_cast<v_buff_size>(str->size()))
   {
     m_dataMemoryHandle = str.getPtr();

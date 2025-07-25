@@ -53,7 +53,7 @@ public:
     bool m_invalidateOnDestroy;
   public:
 
-    ConnectionProxy(const provider::ResourceHandle<data::stream::IOStream>& connectionHandle);
+    ConnectionProxy(const provider::ResourceHandle<data::stream::IOStream>& connectionHandle) noexcept;
 
     ~ConnectionProxy() override;
 
@@ -84,7 +84,7 @@ public:
     std::shared_ptr<ConnectionProxy> m_connectionProxy;
   public:
 
-    HttpConnectionHandle(const std::shared_ptr<ConnectionProxy>& connectionProxy);
+    HttpConnectionHandle(const std::shared_ptr<ConnectionProxy>& connectionProxy) noexcept;
 
     std::shared_ptr<ConnectionProxy> getConnection();
 

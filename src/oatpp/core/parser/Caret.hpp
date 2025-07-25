@@ -158,9 +158,9 @@ private:
   v_int64 m_errorCode;
   std::shared_ptr<std::string> m_dataMemoryHandle;
 public:
-  Caret(const char* text);
-  Caret(const char* parseData, v_buff_size dataSize);
-  Caret(const oatpp::String& str);
+  Caret(const char* text) noexcept;
+  Caret(const char* parseData, v_buff_size dataSize) noexcept;
+  Caret(const oatpp::String& str) noexcept;
 public:
   
   static std::shared_ptr<Caret> createShared(const char* text);

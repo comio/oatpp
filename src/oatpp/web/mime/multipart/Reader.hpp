@@ -58,9 +58,9 @@ public:
    * Constructor.
    * @param multipart - pointer to &id:oatpp::web::mime::multipart::Multipart;.
    */
-  PartsParser(Multipart* multipart);
+  PartsParser(Multipart* multipart) noexcept;
 
-  PartsParser(Multipart* multipart, const PartReadersMap& readersMap);
+  PartsParser(Multipart* multipart, const PartReadersMap& readersMap) noexcept;
 
   void onPartHeaders(const Headers& partHeaders) override;
 
@@ -99,9 +99,9 @@ public:
    * Constructor.
    * @param multipart - pointer to &id:oatpp::web::mime::multipart::Multipart;.
    */
-  AsyncPartsParser(Multipart* multipart);
+  AsyncPartsParser(Multipart* multipart) noexcept;
 
-  AsyncPartsParser(Multipart* multipart, const AsyncPartReadersMap& readersMap);
+  AsyncPartsParser(Multipart* multipart, const AsyncPartReadersMap& readersMap) noexcept;
 
   async::CoroutineStarter onPartHeadersAsync(const Headers& partHeaders) override;
 

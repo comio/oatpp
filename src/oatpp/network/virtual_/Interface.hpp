@@ -78,7 +78,7 @@ public:
     /**
      * Constructor.
      */
-    ConnectionSubmission(bool valid) : m_valid(valid) {}
+    ConnectionSubmission(bool valid) noexcept : m_valid(valid) {}
 
     /**
      * Set socket to be returned in call to &l:Interface::ConnectionSubmission::getSocket ();/&l:Interface::ConnectionSubmission::getSocketNonBlocking ();.
