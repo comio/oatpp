@@ -118,6 +118,7 @@ message("\n#####################################################################
 message("oatpp version: '${OATPP_THIS_MODULE_VERSION}'")
 
 include(cmake/compiler-flags.cmake)
+configure_compiler_flags()
 
 include(cmake/msvc-runtime.cmake)
 configure_msvc_runtime()
