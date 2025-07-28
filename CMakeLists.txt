@@ -14,7 +14,7 @@ set(OATPP_THIS_MODULE_VERSION ${oatpp_VERSION}) ## version of the module (also s
 
 project(oatpp VERSION ${OATPP_THIS_MODULE_VERSION} LANGUAGES CXX)
 
-option(BUILD_SHARED_LIBS "Build shared libraries" OFF)
+option(OATPP_BUILD_SHARED_LIBS "Build shared libraries" OFF)
 option(OATPP_INSTALL "Create installation target for oat++" ON)
 option(OATPP_BUILD_TESTS "Create test target for oat++" ON)
 option(OATPP_LINK_TEST_LIBRARY "Link oat++ test library" ON)
@@ -24,6 +24,12 @@ option(OATPP_MSVC_LINK_STATIC_RUNTIME "MSVC: Link with static runtime (/MT and /
 ###################################################################################################
 ## COMPILATION CONFIG #############################################################################
 ###################################################################################################
+
+if(OATPP_BUILD_SHARED_LIBS)
+    set(OATPP_LIBRARY_TYPE SHARED)
+else()
+    set(OATPP_LIBRARY_TYPE STATIC)
+endif()
 
 if(OATPP_LINK_TEST_LIBRARY)
 	set(OATPP_THIS_MODULE_LIBRARIES oatpp oatpp-test) ## list of libraries to find when find_package is called
@@ -57,6 +63,7 @@ message("## oatpp module compilation config:\n")
 message("OATPP_DISABLE_ENV_OBJECT_COUNTERS=${OATPP_DISABLE_ENV_OBJECT_COUNTERS}")
 message("OATPP_THREAD_HARDWARE_CONCURRENCY=${OATPP_THREAD_HARDWARE_CONCURRENCY}")
 message("OATPP_COMPAT_BUILD_NO_THREAD_LOCAL=${OATPP_COMPAT_BUILD_NO_THREAD_LOCAL}")
+message("OATPP_BUILD_SHARED_LIBS=${OATPP_BUILD_SHARED_LIBS}")
 
 ## Set definitions ###############################################################################
 

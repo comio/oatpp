@@ -3,6 +3,7 @@
 ## oatpp
 
 add_library(oatpp
+        ${OATPP_LIBRARY_TYPE}
         oatpp/algorithm/CRC.cpp
         oatpp/algorithm/CRC.hpp
         oatpp/codegen/ApiClient_define.hpp
@@ -339,6 +340,7 @@ target_include_directories(oatpp PUBLIC
 if(OATPP_LINK_TEST_LIBRARY)
 
 	add_library(oatpp-test
+			${OATPP_LIBRARY_TYPE}
 			oatpp-test/Checker.cpp
 			oatpp-test/Checker.hpp
 			oatpp-test/UnitTest.cpp
